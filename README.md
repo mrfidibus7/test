@@ -1,17 +1,19 @@
-# Claude skills: public-apis + agent-reach
+# Claude skills: public-apis + agent-reach + crypto-analysis-gerhard
 
-Two [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) that let Claude use:
+Three [Agent Skills](https://docs.claude.com/en/docs/agents-and-tools/agent-skills/overview) that let Claude use:
 
 | Skill | Wraps | What Claude can do |
 |---|---|---|
 | `public-apis` | [public-apis/public-apis](https://github.com/public-apis/public-apis) | Search ~1,900 free APIs offline (by keyword, category, auth, HTTPS, CORS), read their docs, then call them |
 | `agent-reach` | [Panniantong/agent-reach](https://github.com/Panniantong/agent-reach) @ `94f06c1` | Read/search the web, YouTube transcripts, GitHub, RSS, Twitter/X, Reddit, Bilibili… through upstream CLIs |
+| `crypto-analysis-gerhard` | Method distilled from 50 @bitcoinstrategy videos (`research/bitcoinstrategy/analysis/`) | Apply his fundamental-analysis checklist to any coin, with a data-snapshot script and an output template. Not financial advice |
 
 Layout:
 
 ```
 .claude/skills/public-apis/   SKILL.md, scripts/search_apis.py, scripts/build_catalog.py, data/apis.json
 .claude/skills/agent-reach/   upstream SKILL.md (+ setup notes), references/, LICENSE
+.claude/skills/crypto-analysis-gerhard/   SKILL.md, scripts/snapshot.py (free-API data snapshot)
 dist/*.zip                    the same skills, zipped for claude.ai upload
 scripts/package_skills.sh     rebuilds dist/
 scripts/fetch_channel.sh      downloads a YouTube channel's captions into research/<channel>/
