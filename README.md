@@ -14,6 +14,8 @@ Layout:
 .claude/skills/agent-reach/   upstream SKILL.md (+ setup notes), references/, LICENSE
 dist/*.zip                    the same skills, zipped for claude.ai upload
 scripts/package_skills.sh     rebuilds dist/
+scripts/fetch_channel.sh      downloads a YouTube channel's captions into research/<channel>/
+research/                     transcripts + analysis per channel (see research/README.md)
 ```
 
 ## Making them available everywhere

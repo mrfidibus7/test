@@ -1,0 +1,5 @@
+# Raw yt-dlp output (large metadata JSON + VTT files)
+research/*/raw/
+# Full transcripts are the creator's content: this repo is public, so they stay
+# local. Make the repo private first if you want to push them (git add -f).
+research/*/transcripts/
